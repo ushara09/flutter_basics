@@ -1,0 +1,125 @@
+- we must use properties inside the widgets.
+
+//////////////images, buttons, icons//////////////////////
+
+          // child: Image.network(
+          //     'https://www.teahub.io/photos/full/0-5468_stars-space-galaxy-5k-outer-space-background-vertical.jpg'), //image from network
+
+          //child: Image.asset('assets/mm.jpg'),    //image from assets
+
+          // child: Icon(     //icons
+          //   Icons.airport_shuttle,
+          //   color: Colors.green,
+          //   size: 60.0,
+          // ),
+
+          // child: RaisedButton(   //normal button
+          //   onPressed: () {},
+          //   child: Text("Click mee"),
+          //   color: Colors.yellow,
+          // ),
+
+          // child: RaisedButton.icon(    //button with icon
+          //   onPressed: () {},
+          //   icon: Icon(Icons.mail),
+          //   label: Text("Mail me"),
+          //   color: Colors.amber,
+          // ),
+
+          // child: IconButton(     //clickable icon
+          //   onPressed: () {},
+          //   icon: Icon(Icons.mail_outline),
+          //   color: Colors.amber,
+          // ),
+          ),
+
+//////////////////////Container and Padding////////////////////////
+
+body: Container(
+        color: Colors.lightGreen,
+        child: Text("Hello Ushara"),
+        padding: EdgeInsets.all(30.0),
+        margin: EdgeInsets.all(40.0),
+      ),
+
+///////////////Rows///////////////////
+
+Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly, //main axis => X axis
+        crossAxisAlignment: CrossAxisAlignment.end, //cross axis => y axis
+        children: [
+          Text("Thimal !"),
+          FlatButton(
+            onPressed: () {},
+            child: Text("Press Me"),
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(20.0),
+            child: Text("Inside container"),
+          ),
+        ],
+      ),
+
+
+////////////////////Coloums///////////////////
+
+Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,	//main axis => Y axis
+        crossAxisAlignment: CrossAxisAlignment.start,		//cross axis => X axis
+        children: [
+          Container(
+            child: Text("One"),
+            color: Colors.red,
+            padding: EdgeInsets.all(30.0),
+          ),
+          Container(
+            child: Text("Two"),
+            color: Colors.yellow,
+            padding: EdgeInsets.all(40.0),
+          ),
+          Container(
+            child: Text("Three"),
+            color: Colors.green,
+            padding: EdgeInsets.all(50.0),
+          ),
+        ],
+      ),
+
+//////////////////////Expanded widgets//////////////
+
+body: Row(
+        children: [
+          Expanded(flex: 3, child: Image.asset('assets/gorillaz.jpg')),
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: Text("1"),
+              color: Colors.pink,
+              padding: EdgeInsets.all(30.0),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: Text("2"),
+              color: Colors.green,
+              padding: EdgeInsets.all(30.0),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: Text("3"),
+              color: Colors.purple,
+              padding: EdgeInsets.all(30.0),
+            ),
+          ),
+        ],
+      ),
+
+
+
+
+

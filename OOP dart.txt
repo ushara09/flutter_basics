@@ -1,0 +1,41 @@
+void main(){
+  User thima = User("Ushara", 24);
+  thima.login();
+  
+  User thima1 = User("Geekiyanage",22);
+  thima1.login();
+  
+  SuperUser sUser = SuperUser("Thimal", 21);
+  sUser.location = "Colombo";
+  print(sUser.username);
+  sUser.publish();
+}
+
+class User{
+  String? username;
+  int? age;
+  
+  User(String uname, int age){
+    this.username = uname;
+    this.age = age;
+  }
+   
+  void login(){
+    print("$username logged in successfully");
+  }
+}
+
+class SuperUser extends User{
+  
+  String? location;
+  
+   SuperUser(String username,int age): super(username, age);
+//   SuperUser(String username, int age, String location){
+//     super(username, age);
+//     this.location = location;
+//   }
+  
+  void publish(){
+    print("$location Publish Updated !");
+  }
+}
