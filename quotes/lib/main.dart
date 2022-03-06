@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quotes/quote.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,13 +15,14 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-  List<String> quotes = [
-    "The purpose of our lives is to be happy",
-    "Life is what happens when you’re busy making other plans.",
-    "Get busy living or get busy dying",
-    "Never let the fear of striking out keep you from playing the game",
-    "In order to write about life first you must live it",
-    "Turn your wounds into wisdom",
+  List<Quote> quotes = [
+    Quote("Author01", "The purpose of our lives is to be happy"),
+    Quote("Author02",
+        "Life is what happens when you’re busy making other plans."),
+    Quote("Author03", "Get busy living or get busy dying"),
+    Quote("Author04",
+        "Never let the fear of striking out keep you from playing the game"),
+    Quote("Author05", "Turn your wounds into wisdom"),
   ];
 
   @override
@@ -34,7 +36,7 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         children: quotes.map((quote) {
-          return Text(quote);
+          return Text("${quote.text} - ${quote.author}");
         }).toList(),
       ),
     );
