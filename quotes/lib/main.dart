@@ -20,9 +20,9 @@ class _QuoteListState extends State<QuoteList> {
     Quote("Author02",
         "Life is what happens when you’re busy making other plans."),
     Quote("Author03", "Get busy living or get busy dying"),
-    Quote("Author04",
-        "Never let the fear of striking out keep you from playing the game"),
-    Quote("Author05", "Turn your wounds into wisdom"),
+    // Quote("Author04",
+    //     "Never let the fear of striking out keep you from playing the game"),
+    // Quote("Author05", "Turn your wounds into wisdom"),
   ];
 
   Widget quoteTemplate(quote) {
@@ -44,6 +44,13 @@ class _QuoteListState extends State<QuoteList> {
               quote.author,
               style: TextStyle(fontSize: 14.0, color: Colors.grey[800]),
             ),
+            SizedBox(
+              height: 8.0,
+            ),
+            FlatButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.delete),
+                label: Text("Delete Quote")),
           ],
         ),
       ),
