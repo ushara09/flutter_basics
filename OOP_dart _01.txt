@@ -34,6 +34,7 @@ class SuperUser extends User{
 //     super(username, age);
 //     this.location = location;
 //   }
+
   
   void publish(){
     print("$location Publish Updated !");
